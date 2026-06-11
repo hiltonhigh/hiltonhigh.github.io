@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Hilton High School Report Cards | Download Your Child's Report Card</title>
+  <meta name="description" content="Access and download your child's report card from Hilton High School. Search by name and verify with your school pay code to get instant access to all available report cards." />
+  <meta name="keywords" content="Hilton High report cards, Hilton High School report cards, download report card Hilton High, Hilton High School student reports" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Hilton High School" />
+  <link rel="canonical" href="https://hiltonhigh.github.io/" />
+
+  <meta property="og:title" content="Hilton High School Report Cards" />
+  <meta property="og:description" content="Download your child's Hilton High School report card. Search by student name and verify with your school pay code." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hiltonhigh.github.io/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Hilton High School Report Cards" />
+  <meta name="twitter:description" content="Download your child's Hilton High School report card securely." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Hilton High School",
+    "description": "Hilton High School student report card download portal for parents.",
+    "url": "https://hiltonhigh.github.io/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ZA"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="badge.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="school-logo">
+        <img src="badge.jpg" alt="Hilton High School badge" class="logo-badge" />
+        <div class="school-name">
+          <span class="school-name-main">Hilton High School</span>
+          <span class="school-name-sub">Report Card Portal</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Hilton High School Report Cards</h1>
+      <p class="hero-sub">Search for your child by name, verify with your school pay code, and download their report card instantly.</p>
+    </section>
+
+    <section class="search-section" aria-label="Report card search">
+
+      <div class="step-card" id="step-search">
+        <div class="step-badge">Step 1</div>
+        <h2 class="step-title">Search for your child</h2>
+        <p class="step-desc">Type your child's name in the box below. Select their name from the suggestions that appear.</p>
+        <div class="input-wrap" role="search">
+          <label for="student-search" class="sr-only">Student name</label>
+          <input
+            type="search"
+            id="student-search"
+            class="search-input"
+            placeholder="e.g. Sipho Dlamini"
+            autocomplete="off"
+            aria-autocomplete="list"
+            aria-controls="suggestions-list"
+            aria-expanded="false"
+          />
+          <div class="search-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <ul id="suggestions-list" class="suggestions-list" role="listbox" aria-label="Student name suggestions" hidden></ul>
+        </div>
+      </div>
+
+      <div class="step-card" id="step-verify" hidden aria-live="polite">
+        <div class="step-badge">Step 2</div>
+        <h2 class="step-title">Verify your school pay code</h2>
+        <p class="step-desc">Enter the school pay code for <strong id="selected-name-display"></strong> to confirm your identity.</p>
+        <form id="verify-form" novalidate>
+          <label for="pay-code-input" class="sr-only">School pay code</label>
+          <input
+            type="text"
+            id="pay-code-input"
+            class="search-input"
+            placeholder="Enter school pay code"
+            autocomplete="off"
+            inputmode="numeric"
+          />
+          <button type="submit" class="btn-primary">Confirm &amp; View Reports</button>
+          <p class="error-msg" id="error-msg" hidden aria-live="assertive">Incorrect school pay code. Please try again.</p>
+        </form>
+        <button class="btn-link" id="btn-back">&#8592; Search again</button>
+      </div>
+
+      <div class="step-card results-card" id="step-results" hidden aria-live="polite">
+        <h2 class="results-student-name" id="results-name"></h2>
+        <p class="results-intro">The following report cards are available for download:</p>
+        <ul class="report-list" id="report-list" aria-label="Available report cards"></ul>
+        <button class="btn-link" id="btn-new-search">&#8592; Search for another student</button>
+      </div>
+
+    </section>
+
+    <section class="info-section" aria-label="Help and information">
+      <h2 class="info-heading">Need help?</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>What is a school pay code?</h3>
+          <p>Your school pay code is the unique numeric code linked to your child's school account. It was provided to you by the school when your child was enrolled.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <h3>How to download a report card</h3>
+          <p>Once verified, click on any report card name in the list. Your browser will open or download the document immediately.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3>Contact the school</h3>
+          <p>If your child's name does not appear in the search, or you do not know your pay code, please call the Hilton High School office:</p>
+          <ul class="contact-numbers">
+            <li><a href="tel:+256782846266">+256 782 846 266</a></li>
+            <li><a href="tel:+256752501404">+256 752 501 404</a></li>
+            <li><a href="tel:+256772409314">+256 772 409 314</a></li>
+            <li><a href="tel:+256772658343">+256 772 658 343</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Hilton High School. All rights reserved.</p>
+      <p class="footer-note">This portal is for authorised parents and guardians only. Report card data is protected by your school pay code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
